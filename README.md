@@ -1,10 +1,6 @@
-# Proyecto-OAW
-Integrantes<br>
-Jesús Miguel Álvarez Vázquez<br>
-<img src="https://github.com/Kanin-020/Proyecto-OAW/blob/main/Integrantes/Yo.jpeg?raw=true" height=200><br>
-William Cetina Pech<br>
-<img src="https://github.com/Kanin-020/Proyecto-OAW/blob/main/Integrantes/Willy.jpeg?raw=true" height=200><br>
-Pedro Daniel Euan Chan<br>
-<img src="https://github.com/Kanin-020/Proyecto-OAW/blob/main/Integrantes/Pedro.jpeg?raw=true" height=200><br>
-Mario Angel May Rodríguez<br>
-<img src="https://github.com/Kanin-020/Proyecto-OAW/blob/main/Integrantes/Mario.jpeg?raw=true" height=200><br>
+# Proyecto-OAW: Lector de noticias RSS
+## Integrantes
+
+| Jesús Miguel Álvarez Vázquez                    | William Cetina Pech                                | Pedro Daniel Euan Chan                             | Mario Angel May Rodriguez                          |
+| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| ![Jesus.jpeg](./assets/img/Jesus.jpeg) | ![Willy.jpeg](./assets/img/Willy.jpeg) | ![Pedro.jpeg](./assets/img/Pedro.jpeg) | ![Mario.jpeg](./assets/img/Mario.jpeg) |
