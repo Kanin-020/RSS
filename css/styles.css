@@ -1,0 +1,98 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+header {
+	text-align: center;
+	width: 100%;
+	height: 45vh;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+
+header .overlay{
+	width: 100%;
+	height: 50vh;
+	padding-top: 20px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+	background-image: linear-gradient( 135deg, #030918 10%, #11388e 100%);
+	
+}
+
+#SearchInput {
+	font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    border-radius: .3rem;
+    padding-left: 5px;
+    line-height: 1.5;
+    border: 1px solid #ced4da
+}
+
+#SearchBTN {
+    padding: .1rem 1rem;
+    border: 1px solid #212121;
+    border-radius: 6px;
+    background-color: #212121;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset,
+        0 1px 3px rgba(0, 0, 0, .2);
+}
+
+#SearchBTN:hover {
+    background-color: #303030;
+    outline: none;
+}
+
+#SearchBTN:active {
+    background-color: #424242;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2) inset;
+}
+
+#tituloHeader {
+	font-family: 'Dancing Script', cursive;
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+
+#tituloRSS {
+	font-family: 'Dancing Script', cursive;
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+#parrafoRSS {
+	font-family: 'Dancing Script', cursive;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+h3, p {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    #tituloHeader {
+        font-size: 25px;
+    }
+	header {
+        height: 45vh;
+    }
+	
+	h3, p {
+		font-size: 15px;
+	}
+	
+	#tituloRSS {
+	font-size: 15px;
+	}
+
+	#parrafoRSS {
+	font-size: 10px;
+	}
+	
+}
