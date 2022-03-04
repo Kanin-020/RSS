@@ -145,3 +145,57 @@ function OrdenarPorCategorias() {
 		crearNoticias(noticiasArray);
 	};
 }
+
+//Animación loader
+function activarAnimacionCargar() {
+  let loader = document.getElementById("loader");
+  loader.style.display = "block";
+}
+
+//Animación loader
+function desactivarAnimacionCargar() {
+  let loader = document.getElementById("loader");
+  loader.style.display = "none";
+}
+
+function agregarNoticiaAlimentacion() {
+  var xhttp = new XMLHttpRequest();
+  let insertar = document.getElementById("insert-url");
+  let datos = document.getElementById("insert-url").value;
+  xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+          cargarSeleccionado(); //Aqui se deberia actualizar el select porque estamos metiendo una nueva url
+          cargarContenido("./php/ObtenerAlimentacion.php");//Aqui deberia actualizar la vista despues de meter una nueva url
+      }
+  };
+  xhttp.open("POST", "./php/AgregarAlimentacion? url=" + datos, true);
+  xhttp.send();
+  insertar.value = "";
+
+}
+
+function cargarSeleccionado() {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+          let datos = JSON.parse(this.responseText);
+          console.log(datos);
+          crearOpciones(datos);
+      }
+  };
+  xhttp.open("GET", "./php/CrearOpcion.php", true);
+  xhttp.send();
+}
+
+function crearOpciones(datos) {
+  let Option = "";
+  for (let i = 0; i < datos.length; i++) {
+      Option +=
+              '<option value= "' +
+              datos[i].idRSS +
+              '">' +
+              datos[i].RSStitle +
+              "</option>";
+  }
+  document.getElementById("SelectRSS").innerHTML = Option;
+}
