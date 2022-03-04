@@ -79,3 +79,69 @@ function getNoticiaSeleccionada(urlRSS, contentData) {
   httpRequest.open("POST", urlRSS + "?data=" + contentData, true);
   httpRequest.send();
 }
+
+function OrdenarPorTitulo() {
+	this.sort= function(){
+		noticiasArray.sort(function (a,b) {
+			if(a.titulo.toLowerCase() > b.titulo.toLowerCase()){
+				return 1;
+			}
+			if(a.titulo.toLowerCase() < b.titulo.toLowerCase()){
+				return -1;
+			}
+			return 0;
+		});
+		crearNoticias(noticiasArray);
+	};
+}
+
+function OrdenarPorFecha() {
+	this.sort= function(){
+		crearNoticias(noticiasPorFechaArray);
+	};
+}
+
+function OrdenarPorEnlace() {
+	this.sort= function(){
+		noticiasArray.sort(function (a,b) {
+			if(a.enlace.toLowerCase() > b.enlace.toLowerCase()){
+				return 1;
+			}
+			if(a.enlace.toLowerCase() < b.enlace.toLowerCase()){
+				return -1;
+			}
+			return 0;
+		});
+		crearNoticias(noticiasArray);
+	};
+}
+
+function OrdenarPorDescripcion() {
+	this.sort= function(){
+		noticiasArray.sort(function (a,b) {
+			if(a.descripcion.toLowerCase() > b.descripcion.toLowerCase()){
+				return 1;
+			}
+			if(a.descripcion.toLowerCase() < b.descripcion.toLowerCase()){
+				return -1;
+			}
+			return 0;
+		});
+		crearNoticias(noticiasArray);
+	};
+}
+
+function OrdenarPorCategorias() {
+	this.sort= function(){
+		noticiasArray.sort(function (a,b) {
+			if(a.cat.toLowerCase() > b.cat.toLowerCase()){
+				return 1;
+			}
+			if(a.cat.toLowerCase() < b.cat.toLowerCase()){
+				return -1;
+			}
+			return 0;
+		});
+		crearNoticias(noticiasArray);
+	};
+}
