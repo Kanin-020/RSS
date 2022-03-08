@@ -3,7 +3,7 @@
 include("../php/ConexionBD.php");
 
 $Query = "SELECT * FROM `inforss`";
-$execute = mysqli_query($con, $Query);
+$execute = mysqli_query($conexionBD, $Query);
 
 while ($row = mysqli_fetch_array($execute)) {
     ActualizarNoticias($row["RSSLink"]);
@@ -26,16 +26,16 @@ function ActualizarNoticias($url) {
             $description = substr($stringCut, 0, strrpos($stringCut, ' ')) . '...';
         }
 
-        $stmt = $con->prepare("INSERT INTO contenidorss (idRSS,fecha,titulo,enlace,descripcion,cat) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE idRSS = idRSS;");
+        $stmt = $conexionBD->prepare("INSERT INTO contenidorss (idRSS,fecha,titulo,enlace,descripcion,cat) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE idRSS = idRSS;");
         $stmt->bind_param("isssss", $irss, $date, $title, $link, $description, $categorie);
-        $stmt->execute() or dir(mysqli_error($con));
+        $stmt->execute() or dir(mysqli_error($conexionBD));
     }
 }
 
 function getID($url) {
     include("../php/ConexionBD.php");
     $Query = "SELECT idRSS FROM inforss WHERE RSSLink='$url'";
-    $execute = mysqli_query($con, $Query);
+    $execute = mysqli_query($conexionBD, $Query);
     $id = mysqli_fetch_array($execute);
     return $id["idRSS"];
 }

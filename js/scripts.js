@@ -168,7 +168,7 @@ function agregarNoticiaAlimentacion() {
       cargarContenido("./php/ObtenerAlimentacion.php"); //Aqui deberia actualizar la vista despues de meter una nueva url
     }
   };
-  xhttp.open("POST", "./php/AgregarAlimentacion? url=" + datos, true);
+  xhttp.open("POST", "./php/AgregarAlimentacion.php? url=" + datos, true);
   xhttp.send();
   insertar.value = "";
 }
@@ -201,11 +201,11 @@ function crearOpciones(datos) {
 
 let MapSort = new Map();
 
-MapSort.set("Date", new SortByDate());
-MapSort.set("Title", new SortByTitle());
-MapSort.set("URL", new SortByURL());
-MapSort.set("Description", new SortByDescription());
-MapSort.set("Categories", new SortByCategorie());
+MapSort.set("Date", new OrdenarPorFecha());
+MapSort.set("Title", new OrdenarPorTitulo());
+MapSort.set("URL", new OrdenarPorEnlace());
+MapSort.set("Description", new OrdenarPorDescripcion());
+MapSort.set("Categories", new OrdenarPorCategorias());
 
 document.getElementById("NewRSSBTN").addEventListener("click", function () {
   agregarNoticiaAlimentacion();

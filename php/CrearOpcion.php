@@ -2,7 +2,7 @@
 include("../php/ConexionBD.php");
 
 $Query = "SELECT idRSS , RSStitle FROM inforss";
-$execute = mysqli_query($con, $Query);
+$execute = mysqli_query($conexionBD, $Query);
 
 if ($execute != null) {
     $ListOfRSSsource = array();

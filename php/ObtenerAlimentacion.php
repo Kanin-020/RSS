@@ -3,14 +3,14 @@
 include("../php/ConexionDB.php");
 
 $Query = "SELECT * FROM `inforss`";
-$execute = mysqli_query($con, $Query);
+$execute = mysqli_query($conexionBD, $Query);
 
 $arrayDatos = mysqli_fetch_array($execute);
 
 function getNews($FirstID) {
     include("ConexionDB.php");
     $Query = "SELECT fecha,titulo,enlace,descripcion,cat FROM `contenidorss` WHERE IdRSS='$FirstID' Order By fecha DESC";
-    $execute = mysqli_query($con, $Query);
+    $execute = mysqli_query($conexionBD, $Query);
     $data = array();
     while ($row = mysqli_fetch_assoc($execute)) {
         $data[] = $row;
