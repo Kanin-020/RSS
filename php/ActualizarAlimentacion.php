@@ -1,6 +1,6 @@
 <?php
 
-include("DBConection.php");
+include("../php/ConexionBD.php");
 
 $Query = "SELECT * FROM `inforss`";
 $execute = mysqli_query($con, $Query);
@@ -10,7 +10,7 @@ while ($row = mysqli_fetch_array($execute)) {
 }
 
 function ActualizarNoticias($url) {
-    include("DBConection.php");
+    include("../php/ConexionBD.php");
     $rss = simplexml_load_file($url);
     $irss = intval(getID($url));
 
@@ -33,7 +33,7 @@ function ActualizarNoticias($url) {
 }
 
 function getID($url) {
-    include("DBConection.php");
+    include("../php/ConexionBD.php");
     $Query = "SELECT idRSS FROM inforss WHERE RSSLink='$url'";
     $execute = mysqli_query($con, $Query);
     $id = mysqli_fetch_array($execute);

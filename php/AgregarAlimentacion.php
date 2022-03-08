@@ -15,7 +15,7 @@ function getTitle($url) {
 
 function getID($url) {
     include("../php/ConexionBD.php");
-    $Query = "SELECT idRSS FROM feedtable WHERE RSSLink='$url'";
+    $Query = "SELECT idRSS FROM inforss WHERE RSSLink='$url'";
     $execute = mysqli_query($con, $Query);
     $id = mysqli_fetch_array($execute);
     return $id["idRSS"];
@@ -39,7 +39,7 @@ function addNews($feedURL) {
             $description = substr($stringCut, 0, strrpos($stringCut, ' ')) . '...';
         }
 
-        $stmt = $con->prepare("INSERT INTO noticias (idRSS,fecha,titulo,enlace,descripcion,cat) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE idRSS = idRSS;");
+        $stmt = $con->prepare("INSERT INTO contenidorss (idRSS,fecha,titulo,enlace,descripcion,cat) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE idRSS = idRSS;");
         $stmt->bind_param("isssss", $irss, $date, $title, $link, $description, $categorie);
         $stmt->execute() or dir(mysqli_error($con));
     }
@@ -48,7 +48,7 @@ function addNews($feedURL) {
 function addRSS($url) {
     include("../php/ConexionBD.php");
     $title = getTitle($url);
-    $stmt = $con->prepare("INSERT INTO feedtable (RSSLink,RSSTitle)  VALUES (?,?) ON DUPLICATE KEY UPDATE RSSLink = RSSLink;");
+    $stmt = $con->prepare("INSERT INTO inforss (RSSLink,RSSTitle)  VALUES (?,?) ON DUPLICATE KEY UPDATE RSSLink = RSSLink;");
     $stmt->bind_param("ss", $url, $title);
     $stmt->execute() or dir(mysqli_error($con));
     $stmt->close();

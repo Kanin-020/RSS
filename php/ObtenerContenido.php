@@ -1,6 +1,6 @@
 <?php
 
-include("DBConection.php");
+include("../php/ConexionBD.php");
 $ID = $_REQUEST["data"];
 $Query = "SELECT * FROM contenidorss where idRSS= '$ID' order by fecha DESC";
 $execute = mysqli_query($con, $Query);

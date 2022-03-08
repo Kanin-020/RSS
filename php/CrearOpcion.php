@@ -1,7 +1,7 @@
 <?php
 include("../php/ConexionBD.php");
 
-$Query = "SELECT idRSS , RSStitle FROM feedtable";
+$Query = "SELECT idRSS , RSStitle FROM inforss";
 $execute = mysqli_query($con, $Query);
 
 if ($execute != null) {
