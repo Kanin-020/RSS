@@ -68,13 +68,13 @@ function buscarNoticias(datosNoticias, noticiasArray) {
 function getNoticiaSeleccionada(urlRSS, contentData) {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function () {
-      if ((this.readyState == 4) && (this.status == 200)) {
-          let contentData = JSON.parse(this.responseText);
-          console.log(contentData);
-          crearNoticias(contentData);
-          noticiasArray = contentData;
-          noticiasPorFechaArray = JSON.parse(this.responseText);
-      }
+    if (this.readyState == 4 && this.status == 200) {
+      let contentData = JSON.parse(this.responseText);
+      console.log(contentData);
+      crearNoticias(contentData);
+      noticiasArray = contentData;
+      noticiasPorFechaArray = JSON.parse(this.responseText);
+    }
   };
   httpRequest.open("POST", urlRSS + "?data=" + contentData, true);
   httpRequest.send();
@@ -163,25 +163,24 @@ function agregarNoticiaAlimentacion() {
   let insertar = document.getElementById("insert-url");
   let datos = document.getElementById("insert-url").value;
   xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-          cargarSeleccionado(); //Aqui se deberia actualizar el select porque estamos metiendo una nueva url
-          cargarContenido("./php/ObtenerAlimentacion.php");//Aqui deberia actualizar la vista despues de meter una nueva url
-      }
+    if (this.readyState == 4 && this.status == 200) {
+      cargarSeleccionado(); //Aqui se deberia actualizar el select porque estamos metiendo una nueva url
+      cargarContenido("./php/ObtenerAlimentacion.php"); //Aqui deberia actualizar la vista despues de meter una nueva url
+    }
   };
   xhttp.open("POST", "./php/AgregarAlimentacion? url=" + datos, true);
   xhttp.send();
   insertar.value = "";
-
 }
 
 function cargarSeleccionado() {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-          let datos = JSON.parse(this.responseText);
-          console.log(datos);
-          crearOpciones(datos);
-      }
+    if (this.readyState == 4 && this.status == 200) {
+      let datos = JSON.parse(this.responseText);
+      console.log(datos);
+      crearOpciones(datos);
+    }
   };
   xhttp.open("GET", "./php/CrearOpcion.php", true);
   xhttp.send();
@@ -190,12 +189,12 @@ function cargarSeleccionado() {
 function crearOpciones(datos) {
   let Option = "";
   for (let i = 0; i < datos.length; i++) {
-      Option +=
-              '<option value= "' +
-              datos[i].idRSS +
-              '">' +
-              datos[i].RSStitle +
-              "</option>";
+    Option +=
+      '<option value= "' +
+      datos[i].idRSS +
+      '">' +
+      datos[i].RSStitle +
+      "</option>";
   }
   document.getElementById("SelectRSS").innerHTML = Option;
 }
@@ -209,45 +208,47 @@ MapSort.set("Description", new SortByDescription());
 MapSort.set("Categories", new SortByCategorie());
 
 document.getElementById("NewRSSBTN").addEventListener("click", function () {
-    AddNewFeedRSS();
-    loadIn();
-    setTimeout(function () {
-        loadOut();
-    }, 2000);
+  agregarNoticiaAlimentacion();
+  activarAnimacionCargar();
+  setTimeout(function () {
+    desactivarAnimacionCargar();
+  }, 2000);
 });
 
 document.getElementById("UpdateRSS").addEventListener("click", function () {
-    var content = document.getElementById("Content");
-    let data = document.getElementById("SelectRSS").value;
-    UpdateContent("./php/ActualizarAlimentacion.php");
-    getNewBySelect("./php/ObtenerContenido.php", data);
-    content.style.textAlign = "left";
+  var content = document.getElementById("Content");
+  let data = document.getElementById("SelectRSS").value;
+  ActualizarContenido("./php/ActualizarAlimentacion.php");
+  getNoticiaSeleccionada("./php/ObtenerContenido.php", data);
+  content.style.textAlign = "left";
 });
 
 document.getElementById("SelectRSS").addEventListener("change", function () {
-    let data = document.getElementById("SelectRSS").value;
-    getNewBySelect("./php/ObtenerContenido.php", data);
+  let data = document.getElementById("SelectRSS").value;
+  getNoticiaSeleccionada("./php/ObtenerContenido.php", data);
 });
 
 document.getElementById("Selection").addEventListener("change", function () {
-    let Key = document.getElementById("Selection").value;
-    let Sort = MapSort.get(Key);
-    Sort.sort();
+  let Key = document.getElementById("Selection").value;
+  let Sort = MapSort.get(Key);
+  Sort.sort();
 });
 
 document.getElementById("SearchBTN").addEventListener("click", function () {
-    let datoAEncontrar = document.getElementById("SearchInput").value;
-    SearchNew(datoAEncontrar, noticiasArray);
-    document.getElementById("SearchInput").value = "";
+  let datoAEncontrar = document.getElementById("SearchInput").value;
+  buscarNoticias(datoAEncontrar, noticiasArray)
+  document.getElementById("SearchInput").value = "";
 });
 
 function ActualizarContenido() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-
-        }
-    };
-    xhttp.open("GET", "./php/ActualizarAlimentacion.php", true);
-    xhttp.send();
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+    }
+  };
+  xhttp.open("GET", "./php/ActualizarAlimentacion.php", true);
+  xhttp.send();
 }
+
+cargarContenido("./php/ObtenerAlimentacion.php", "Content");
+cargarSeleccionado();

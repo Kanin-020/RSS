@@ -8,7 +8,7 @@ $execute = mysqli_query($con, $Query);
 $arrayDatos = mysqli_fetch_array($execute);
 
 function getNews($FirstID) {
-    include("../php/ConexionDB.php");
+    include("ConexionDB.php");
     $Query = "SELECT fecha,titulo,enlace,descripcion,cat FROM `contenidorss` WHERE IdRSS='$FirstID' Order By fecha DESC";
     $execute = mysqli_query($con, $Query);
     $data = array();
