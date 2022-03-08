@@ -199,3 +199,55 @@ function crearOpciones(datos) {
   }
   document.getElementById("SelectRSS").innerHTML = Option;
 }
+
+let MapSort = new Map();
+
+MapSort.set("Date", new SortByDate());
+MapSort.set("Title", new SortByTitle());
+MapSort.set("URL", new SortByURL());
+MapSort.set("Description", new SortByDescription());
+MapSort.set("Categories", new SortByCategorie());
+
+document.getElementById("NewRSSBTN").addEventListener("click", function () {
+    AddNewFeedRSS();
+    loadIn();
+    setTimeout(function () {
+        loadOut();
+    }, 2000);
+});
+
+document.getElementById("UpdateRSS").addEventListener("click", function () {
+    var content = document.getElementById("Content");
+    let data = document.getElementById("SelectRSS").value;
+    UpdateContent("./php/ActualizarAlimentacion.php");
+    getNewBySelect("./php/ObtenerContenido.php", data);
+    content.style.textAlign = "left";
+});
+
+document.getElementById("SelectRSS").addEventListener("change", function () {
+    let data = document.getElementById("SelectRSS").value;
+    getNewBySelect("./php/ObtenerContenido.php", data);
+});
+
+document.getElementById("Selection").addEventListener("change", function () {
+    let Key = document.getElementById("Selection").value;
+    let Sort = MapSort.get(Key);
+    Sort.sort();
+});
+
+document.getElementById("SearchBTN").addEventListener("click", function () {
+    let datoAEncontrar = document.getElementById("SearchInput").value;
+    SearchNew(datoAEncontrar, noticiasArray);
+    document.getElementById("SearchInput").value = "";
+});
+
+function ActualizarContenido() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+        }
+    };
+    xhttp.open("GET", "./php/ActualizarAlimentacion.php", true);
+    xhttp.send();
+}
