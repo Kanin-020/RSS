@@ -1,6 +1,6 @@
 <?php
 
-include("../php/ConexionDB.php");
+include("../php/ConexionBD.php");
 
 $Query = "SELECT * FROM `inforss`";
 $execute = mysqli_query($conexionBD, $Query);
@@ -8,7 +8,7 @@ $execute = mysqli_query($conexionBD, $Query);
 $arrayDatos = mysqli_fetch_array($execute);
 
 function getNews($FirstID) {
-    include("ConexionDB.php");
+    include("ConexionBD.php");
     $Query = "SELECT fecha,titulo,enlace,descripcion,cat FROM `contenidorss` WHERE IdRSS='$FirstID' Order By fecha DESC";
     $execute = mysqli_query($conexionBD, $Query);
     $data = array();
