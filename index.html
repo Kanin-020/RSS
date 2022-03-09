@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto-OAW</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="overlay">
+			<h1 id="tituloHeader">Lector de Noticias RSS</h1>
+			<p>Esta es tu fuente RSS personal. ¡Pruébame!</p>
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col-12 col-md-5 mb-2 mb-md-0">
+						<input class="form-control form-control-lg" id="insert-url" type="text" placeholder="Inserte un link RSS">
+					</div>
+					<div class="col-12 col-md-1">
+						<button class="btn btn-dark btn-block btn-lg" id="NewRSSBTN" type="button">Añadir</button>
+					</div>               
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container" style="padding-top:20px;">
+		<div class="row justify-content-md-center">
+			<div class="col-8 col-md-3">
+				<input type="text" id="SearchInput" placeholder="Ingrese una etiqueta">
+			</div>
+			<div class="col-4 col-md-2" style="padding-bottom:15px;">
+				<input type="button" value="Buscar" id="SearchBTN" class="button">
+			</div>
+			<div class="col-8 col-md-3"  style="padding-bottom:15px;">
+				<div class="filter-options"><span>Canales RSS:</span><select id="SelectRSS"> </select></div>
+			</div>
+			<div class="col-8 col-md-4" >
+                <div class="filter-options">
+                    <span>Ordenar por:</span>
+                    <select id="Selection">
+                            <option value="Title">Título</option>
+                            <option value="Date"> Fecha (Nuevas a Antiguas)</option>
+                            <option value="Url">URL</option>
+                            <option value="Description">Descripción</option>
+                            <option value="Categories">Categorías</option>
+                    </select>
+                </div>
+			</div>
+			
+			<div class="col-4 col-md-1" style="padding-bottom:15px;">
+				<input type="button" value="Actualizar Noticias" id="UpdateRSS" class="button">
+			</div>
+		</div>
+		
+	</div>
+    <div class="preloader" id="loader"></div> 
+
+	<main>
+        <div id="Content"></div>
+    </main>
+
+	<footer align="center" class="fixed-bottom">
+    <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | ©2022 Universidad Autonoma de Yucatan</small>
+	</footer>
+	
+	<script src="assets/jQuery/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>
