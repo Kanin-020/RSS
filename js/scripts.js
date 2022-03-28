@@ -173,6 +173,10 @@ function agregarNoticiaAlimentacion() {
   insertar.value = "";
 }
 
+function borrar(){
+
+}
+
 function cargarSeleccionado() {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {

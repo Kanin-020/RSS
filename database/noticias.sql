@@ -35,7 +35,7 @@ CREATE TABLE `contenidorss` (
   `enlace` varchar(400) NOT NULL,
   `descripcion` varchar(400) DEFAULT NULL,
   `cat` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci	;
 
 -- --------------------------------------------------------
 
@@ -47,7 +47,7 @@ CREATE TABLE `inforss` (
   `idRSS` int NOT NULL,
   `RSSLink` varchar(100) NOT NULL,
   `RSSTitle` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas

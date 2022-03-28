@@ -20,7 +20,7 @@ header .overlay {
   padding-top: 20px;
   color: #fff;
   text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient(135deg, #030918 10%, #11388e 100%);
+  background-image: url(../img/gradiente.jpg);
 }
 
 #SearchInput {
@@ -123,5 +123,7 @@ p {
 }
 
 .News {
-  margin: 2rem 8rem 0 8rem;
+  margin: 3rem 8rem 0 8rem;
+  border-radius: 10px;
+  background-image: url(../img/White.jpg);
 }

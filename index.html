@@ -7,12 +7,13 @@
     <title>Proyecto-OAW</title>
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
-<body>
+<body style="background-image: url(img/Fondo.png);">
 
-	<header>
-		<div class="overlay">
+	<header class="animate__animated animate__fadeInDownBig">
+		<div class="overlay" style="z-index:1;">
 			<h1 id="tituloHeader">Lector de Noticias RSS</h1>
 			<p>Esta es tu fuente RSS personal. ¡Pruébame!</p>
 			<div class="container">
@@ -27,45 +28,54 @@
 			</div>
 		</div>
 	</header>
-
-	<div class="container" style="padding-top:20px;">
-		<div class="row justify-content-md-center">
-			<div class="col-8 col-md-3">
-				<input type="text" id="SearchInput" placeholder="Ingrese una etiqueta">
-			</div>
-			<div class="col-4 col-md-2" style="padding-bottom:15px;">
-				<input type="button" value="Buscar" id="SearchBTN" class="button">
-			</div>
-			<div class="col-8 col-md-3"  style="padding-bottom:15px;">
-				<div class="filter-options"><span>Canales RSS:</span><select id="SelectRSS"> </select></div>
-			</div>
-			<div class="col-8 col-md-4" >
-                <div class="filter-options">
-                    <span>Ordenar por:</span>
-                    <select id="Selection">
-                            <option value="Title">Título</option>
-                            <option value="Date"> Fecha (Nuevas a Antiguas)</option>
-                            <option value="Url">URL</option>
-                            <option value="Description">Descripción</option>
-                            <option value="Categories">Categorías</option>
-                    </select>
-                </div>
+	
+	<a class="animate__animated animate__fadeInRightBig" href="index.html"><img class="Logo" style="display:scroll; position:fixed; bottom:100px; right:0px; height:15vh;" src="img/LogoRSS.png"/></a>
+	<a class="animate__animated animate__fadeInLeftBig" href="https://uady.mx/#/home"><img class="Logo" style="display:scroll; position:fixed; bottom:100px; left:0px; height:20vh;" src="img/LogoUADY.png"/></a>
+	
+	<div class="animate__animated animate__zoomIn">
+		<div class="container" style="padding-top:20px;">
+			<div class="row justify-content-md-center">
+				<div class="col-8 col-md-3">
+					<input type="text" id="SearchInput" placeholder="Ingrese una etiqueta">
+				</div>
+				<div class="col-4 col-md-2" style="padding-bottom:15px;">
+					<input type="button" value="Buscar" id="SearchBTN" class="button">
+				</div>
+					<div class="col-8 col-md-3"  style="padding-bottom:15px;">
+					<div class="filter-options"><span>Canales RSS:</span><select id="SelectRSS"> </select></div>
+				</div>
+				<div class="col-8 col-md-4" >
+					<div class="filter-options">
+						<span>Ordenar por:</span>
+						<select id="Selection">
+								<option value="Title">Título</option>
+								<option value="Date"> Fecha (Nuevas a Antiguas)</option>
+								<option value="Url">URL</option>
+								<option value="Description">Descripción</option>
+								<option value="Categories">Categorías</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="col-4 col-md-1" style="padding-bottom:15px;">
+					<input type="button" value="Actualizar Noticias" id="UpdateRSS" class="button">
+				</div>
 			</div>
 			
-			<div class="col-4 col-md-1" style="padding-bottom:15px;">
-				<input type="button" value="Actualizar Noticias" id="UpdateRSS" class="button">
-			</div>
 		</div>
-		
+		<div class="preloader" id="loader"></div> 
 	</div>
-    <div class="preloader" id="loader"></div> 
 
 	<main>
-        <div id="Content"></div>
+		<div class="animate__animated animate__slideInUp">
+			<div id="Content"></div>
+		</Div>
     </main>
 
-	<footer align="center" class="fixed-bottom">
-    <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | ©2022 Universidad Autonoma de Yucatan</small>
+	<footer align="center" class="fixed-bottom" style="background-image: url(img/Footer.jpg);">
+		<div>
+			<small class="d-inline-block text-muted mt-5" style="font-size: 15px;">Todos los derechos reservados | ©2022 Universidad Autonoma de Yucatan</small>
+		</div>
 	</footer>
 	
 	<script src="assets/jQuery/jquery.min.js"></script>
