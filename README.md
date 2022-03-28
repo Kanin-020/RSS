@@ -1,4 +1,4 @@
-# Proyecto-OAW: Lector de noticias RSS
+# Lector de Noticias RSS - Optimización del Cliente
 
 ## Integrantes
 
