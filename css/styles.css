@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+  background-image: linear-gradient(135deg, #e0e3eb 10%, #f8f8f8 100%)
+}
+
 header {
   text-align: center;
   width: 100%;
@@ -20,7 +25,7 @@ header .overlay {
   padding-top: 20px;
   color: #fff;
   text-shadow: 1px 1px 1px #333;
-  background-image: url(../img/gradiente.jpg);
+  background-image: linear-gradient(135deg, #030918 10%, #11388e 100%);
 }
 
 #SearchInput {
@@ -125,5 +130,29 @@ p {
 .News {
   margin: 3rem 8rem 0 8rem;
   border-radius: 10px;
-  background-image: url(../img/White.jpg);
+}
+
+#bg-LogoRSS {
+  display:scroll; position:fixed; bottom:0px; right:0px; 
+  width: 128px; height: 111px;
+    background: url('../img/css_sprites.png') -10px -10px;
+}
+
+#bg-LogoUADY {
+  display:scroll; position:fixed; bottom:0px; left:0px;
+  width: 94px; height: 111px;
+    background: url('../img/css_sprites.png') -158px -10px;
+}
+
+.overlay{
+  z-index:1;
+}
+
+.container{
+  padding-top:20px;
+  padding-bottom:15px;
+}
+
+.fixed-bottom{
+  font-size: 15px;
 }

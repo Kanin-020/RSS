@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto-OAW</title>
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
-<body style="background-image: url(img/Fondo.png);">
+<body>
 
 	<header class="animate__animated animate__fadeInDownBig">
-		<div class="overlay" style="z-index:1;">
+		<div class="overlay">
 			<h1 id="tituloHeader">Lector de Noticias RSS</h1>
 			<p>Esta es tu fuente RSS personal. ¡Pruébame!</p>
 			<div class="container">
@@ -28,20 +28,20 @@
 			</div>
 		</div>
 	</header>
-	
-	<a class="animate__animated animate__fadeInRightBig" href="index.html"><img class="Logo" style="display:scroll; position:fixed; bottom:100px; right:0px; height:15vh;" src="img/LogoRSS.png"/></a>
-	<a class="animate__animated animate__fadeInLeftBig" href="https://uady.mx/#/home"><img class="Logo" style="display:scroll; position:fixed; bottom:100px; left:0px; height:20vh;" src="img/LogoUADY.png"/></a>
+
+	<a class="animate__animated animate__fadeInRightBig" href="index.html"><div id="bg-LogoRSS"></div></a>
+	<a class="animate__animated animate__fadeInLeftBig" href="https://uady.mx/#/home"><div id="bg-LogoUADY"></div></a>
 	
 	<div class="animate__animated animate__zoomIn">
-		<div class="container" style="padding-top:20px;">
+		<div class="container">
 			<div class="row justify-content-md-center">
 				<div class="col-8 col-md-3">
 					<input type="text" id="SearchInput" placeholder="Ingrese una etiqueta">
 				</div>
-				<div class="col-4 col-md-2" style="padding-bottom:15px;">
+				<div class="col-4 col-md-2">
 					<input type="button" value="Buscar" id="SearchBTN" class="button">
 				</div>
-					<div class="col-8 col-md-3"  style="padding-bottom:15px;">
+					<div class="col-8 col-md-3">
 					<div class="filter-options"><span>Canales RSS:</span><select id="SelectRSS"> </select></div>
 				</div>
 				<div class="col-8 col-md-4" >
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				
-				<div class="col-4 col-md-1" style="padding-bottom:15px;">
+				<div class="col-4 col-md-1">
 					<input type="button" value="Actualizar Noticias" id="UpdateRSS" class="button">
 				</div>
 			</div>
@@ -72,14 +72,17 @@
 		</Div>
     </main>
 
-	<footer align="center" class="fixed-bottom" style="background-image: url(img/Footer.jpg);">
+	<footer align="center" class="fixed-bottom">
 		<div>
-			<small class="d-inline-block text-muted mt-5" style="font-size: 15px;">Todos los derechos reservados | ©2022 Universidad Autonoma de Yucatan</small>
+			<small class="d-inline-block text-muted mt-5">Todos los derechos reservados | ©2022 Universidad Autonoma de Yucatan</small>
 		</div>
 	</footer>
 	
-	<script src="assets/jQuery/jquery.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="js/scripts.js"></script>
 
 </body>
