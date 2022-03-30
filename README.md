@@ -4,7 +4,7 @@
 
 | Jesús Miguel Álvarez Vázquez | William Cetina Pech           | Pedro Daniel Euan Chan        | Mario Angel May Rodriguez     |
 | ------------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
-| ![Jesus.jpeg](./img/Jesus.jpeg)   | ![Willy.jpeg](./img/Willy.jpeg) | ![Pedro.jpeg](./img/Pedro.jpeg) | ![Mario.jpeg](./img/Mario.jpeg) |
+| ![Jesus](https://ibb.co/10jLVH4)   | ![Willy](https://ibb.co/ZzzngK6) | ![Pedro](https://ibb.co/sq3jST4) | ![Mario](https://ibb.co/ZGTF062) |
 
 # Flujo de Trabajo
 
