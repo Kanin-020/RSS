@@ -16,7 +16,7 @@ Para delimitar nuestro flujo de trabajo, hemos creado ramas para ubicar el códi
 
 # Configuración del Servidor Apache
 
-En esta rama se optimizó el lado del servidor configurando un par de archivos del servidor Apache. Importante mencionar que hay que reiniciar el servidor al terminar de modificar los archivos para ver reflejada la optimización.
+En esta rama se optimizó el lado del servidor configurando un par de archivos del servidor Apache. Importante mencionar que hay que reiniciar el servidor al terminar de modificar los archivos para poder ver reflejada la optimización.
 
 ### httpd.conf
 
