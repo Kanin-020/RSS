@@ -2,9 +2,9 @@
 
 ## Integrantes
 
-| Jesús Miguel Álvarez Vázquez            | William Cetina Pech                        | Pedro Daniel Euan Chan                     | Mario Angel May Rodriguez                  | Lorenzo José De Jesús Lliteras Narváez |
-| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ----------------------------------------- |
-| ![Jesus](https://i.ibb.co/3TQ7XtP/Jesus.jpg) | ![Willy](https://i.ibb.co/xqqpgGS/Willy.jpg) | ![Pedro](https://i.ibb.co/x65hvnb/Pedro.jpg) | ![Mario](https://i.ibb.co/k5cwtgm/Mario.jpg) | ![Lorenzo](https://i.ibb.co/zSsQBGQ/Lorenzo.jpg)                                 |
+| Jesús Miguel Álvarez Vázquez            | William Cetina Pech                        | Pedro Daniel Euan Chan                     | Mario Angel May Rodriguez                  | Lorenzo José de Jesús Lliteras Narváez      |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ---------------------------------------------- |
+| ![Jesus](https://i.ibb.co/3TQ7XtP/Jesus.jpg) | ![Willy](https://i.ibb.co/xqqpgGS/Willy.jpg) | ![Pedro](https://i.ibb.co/x65hvnb/Pedro.jpg) | ![Mario](https://i.ibb.co/k5cwtgm/Mario.jpg) | ![Lorenzo](https://i.ibb.co/zSsQBGQ/Lorenzo.jpg) |
 
 # Flujo de Trabajo
 
@@ -16,7 +16,7 @@ Para delimitar nuestro flujo de trabajo, hemos creado ramas para ubicar el códi
 
 # Configuración del Servidor Apache
 
-En esta rama se optimizó el lado del servidor configurando un par de archivos del servidor Apache. Importante mencionar que hay que reiniciar el servidor al terminar de modificar los archivos.
+En esta rama se optimizó el lado del servidor configurando un par de archivos del servidor Apache. Importante mencionar que hay que reiniciar el servidor al terminar de modificar los archivos para ver reflejada la optimización.
 
 ### httpd.conf
 
