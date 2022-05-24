@@ -2,9 +2,9 @@
 
 ## Integrantes
 
-| Jesús Miguel Álvarez Vázquez | William Cetina Pech           | Pedro Daniel Euan Chan        | Mario Angel May Rodriguez     |
-| ------------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
-| ![Jesus.jpeg](./img/Jesus.jpeg)   | ![Willy.jpeg](./img/Willy.jpeg) | ![Pedro.jpeg](./img/Pedro.jpeg) | ![Mario.jpeg](./img/Mario.jpeg) |
+| Jesús Miguel Álvarez Vázquez            | William Cetina Pech                        | Pedro Daniel Euan Chan                     | Mario Angel May Rodriguez                  | Lorenzo José de Jesús Lliteras Narváez      |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ---------------------------------------------- |
+| ![Jesus](https://i.ibb.co/3TQ7XtP/Jesus.jpg) | ![Willy](https://i.ibb.co/xqqpgGS/Willy.jpg) | ![Pedro](https://i.ibb.co/x65hvnb/Pedro.jpg) | ![Mario](https://i.ibb.co/k5cwtgm/Mario.jpg) | ![Lorenzo](https://i.ibb.co/zSsQBGQ/Lorenzo.jpg) |
 
 # Flujo de Trabajo
 
@@ -12,6 +12,7 @@ Para delimitar nuestro flujo de trabajo, hemos creado ramas para ubicar el códi
 
 1. RSS-NoOptimizado
 2. OptimizacionCliente
+3. OptimizacionServidor
 
 # Ejecución e Instalación
 
